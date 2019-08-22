@@ -11,7 +11,7 @@ seasons = {'2010':{'start_date': '2010-04-04', 'end_date': '2010-11-01'},
            '2016':{'start_date': '2016-04-03', 'end_date': '2016-11-02'},
            '2017':{'start_date': '2017-04-02', 'end_date': '2017-11-01'},
            '2018':{'start_date': '2018-03-29', 'end_date': '2018-10-28'},
-           '2019':{'start_date': '2019-3-20', 'end_date': '2019-10-30'}
+           '2019':{'start_date': '2019-03-20', 'end_date': '2019-10-30'}
            }
 
 
@@ -26,11 +26,12 @@ def pull_clean_and_pickle(start_date, end_date, year):
          'tfs_deprecated', 'tfs_zulu_deprecated', 'umpire'])
 
     # Sort pitches chronologically
+    # TODO - Need to fix this line to account for games occuring on same day
     df = df.sort_values(by = ['game_date', 'at_bat_number', 'pitch_number'])
 
     # Pickle DataFrame
     df.to_pickle(path=(
-    "/Users/mattkirby/repos/RC-v1.0--Data-Gathering/pitches_" + year + ".pkl"
+    "/Users/mattkirby/repos/RC-v1.0--Data-Gathering/season_pickles/pitches_" + year + ".pkl"
     ),compression='zip')
 
 
