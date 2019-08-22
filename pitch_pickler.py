@@ -15,7 +15,7 @@ seasons = {'2010':{'start_date': '2010-04-04', 'end_date': '2010-11-01'},
            }
 
 
-def pull_and_pickle(start_date, end_date, year):
+def pull_clean_and_pickle(start_date, end_date, year):
 
     # Pull in DataFrame from statcast
     df = statcast(start_dt = start_date, end_dt = end_date)
@@ -37,4 +37,4 @@ def pull_and_pickle(start_date, end_date, year):
 for year in seasons.keys():
   start_date = seasons[year]['start_date']
   end_date = seasons[year]['end_date']
-  pull_and_pickle(start_date, end_date, year)
+  pull_clean_and_pickle(start_date, end_date, year)
