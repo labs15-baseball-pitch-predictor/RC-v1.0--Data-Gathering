@@ -1,13 +1,13 @@
 # RC-v1.0--Data-Gathering
 ## Intial data gathering for the project
-### Import Data From Statcast and Save `pull_clean_and_pckle.py`
-1. Access MLB Statcast data via the py baseball package
-2. Preform Initial Data Cleaning
-3. Save cleaned Statcasy data as pickle files by season (see `season_pickles` folder) 
+### Import Data From Statcast and Save `pull_clean_and_pickle.py`
+1. Access MLB Statcast data via the `pybaseball` package
+2. Preform initial data cleaning
+3. Save cleaned Statcast data as pickle files by season (see `season_pickles` folder) 
 
 ### Convert Data to CSVs `pitches_to_csv.py`
 4. Convert pickle files to DataFrames
-5. Export each season as a CSV file
+5. Export each season DataFrame as a CSV file
 
 ### AWS Sorage
 6. CSVs are uploaded to an AWS S3 Bucket
