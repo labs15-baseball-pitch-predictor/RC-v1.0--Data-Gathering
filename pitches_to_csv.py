@@ -8,7 +8,9 @@ season_dataframes = {}
 
 for i in list(zip(filenames, seasons)):
         path = "/Users/mattkirby/repos/RC-v1.0--Data-Gathering/season_pickles/" + i[0]
-        season_dataframes[i[1]] = pd.read_pickle(path, compression='zip')
+        df = pd.read_pickle(path, compression='zip')
+        df = df.drop(columns = ['des'])
+        season_dataframes[i[1]] = df
 
 
 i = 2010
