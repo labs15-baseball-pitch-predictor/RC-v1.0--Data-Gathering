@@ -26,8 +26,7 @@ def pull_clean_and_pickle(start_date, end_date, year):
          'tfs_deprecated', 'tfs_zulu_deprecated', 'umpire'])
 
     # Sort pitches chronologically
-    # TODO - Need to fix this line to account for games occuring on same day
-    df = df.sort_values(by = ['game_date', 'at_bat_number', 'pitch_number'])
+    df = df.sort_values(by = ['game_date', 'game_pk', 'at_bat_number', 'pitch_number'])
 
     # Pickle DataFrame
     df.to_pickle(path=(
