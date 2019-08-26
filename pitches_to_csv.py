@@ -1,3 +1,5 @@
+## Takes Pickle Files and Exports Them to CSVs
+
 import pandas as pd
 
 filenames = ['pitches_' + str(i) + '.pkl' for i in range(2010,2019)]
