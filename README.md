@@ -16,4 +16,4 @@
 
 ### Query AWS Redshift Table `AWS_Redshift_query.ipynb`
 9. Query Redshift `pitches` table with conditions
-10. Save query as DataFrame
+10. Save query as DataFrame with column names from `column_names.py`
