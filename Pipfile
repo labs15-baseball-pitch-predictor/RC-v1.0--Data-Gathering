@@ -10,6 +10,7 @@ pybaseball = "*"
 pandas = "*"
 psychopg2 = "*"
 psycopg2 = "*"
+category-encoders = "*"
 
 [requires]
 python_version = "3.6"
